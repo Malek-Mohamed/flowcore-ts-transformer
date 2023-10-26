@@ -101,6 +101,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
       } = {};
 
       for (const key of Object.keys(expectedConfiguration.output)) {
+        console.log("Conf ", expectedConfiguration.output[key])
         if (expectedConfiguration.output[key] === ":uuid:") {
           data[key] = expect.any(String);
           continue;
