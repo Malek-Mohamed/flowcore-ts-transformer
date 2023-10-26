@@ -105,7 +105,10 @@ describe("NodeJS Test Transformer (e2e)", () => {
           data[key] = expect.any(String);
           continue;
         }
-
+        if (expectedConfiguration.output[key] === ":number:") {
+          data[key] = expect.any(String);
+          continue;
+        }
         if (expectedConfiguration.output[key] === ":date:") {
           data[key] = expect.any(String);
           continue;
