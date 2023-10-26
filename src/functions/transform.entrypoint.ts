@@ -17,7 +17,7 @@ export default async function (input: Input) {
   return {
     eventid: input.eventId,
     validtime: input.validTime,
-    transformed_at: new Date().getTime,
+    transformed_at: new Date().toUTCString(),
     random_number: randomIntFromInterval(10, 100),
     ...input.payload,
   };

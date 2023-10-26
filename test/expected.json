@@ -8,7 +8,7 @@
       "eventid": ":uuid:",
       "validtime": ":date:",
       "transformed_at": ":date:",
-      "random_number": ":ignore:",
+      "random_number": ":number:",
       "hello": "world",
       "bar": "baz"
     }
@@ -21,7 +21,7 @@
       "eventid": ":uuid:",
       "validtime": ":date:",
       "transformed_at": ":date:",
-      "random_number": ":ignore:",
+      "random_number": ":number:",
       "foo": "bar"
     }
   }

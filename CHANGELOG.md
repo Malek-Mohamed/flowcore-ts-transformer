@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Malek-Mohamed/flowcore-ts-transformer/compare/v1.0.0...v1.1.0) (2023-10-26)
+
+
+### Features
+
+* add additional fields ([02b2194](https://github.com/Malek-Mohamed/flowcore-ts-transformer/commit/02b21946e237aa3e8c5474dcf99d6ae352bae078))
+
 ## 1.0.0 (2023-10-26)
 
 
