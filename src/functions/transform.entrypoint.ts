@@ -10,10 +10,6 @@ interface Input<T = any> {
   payload: T;
 }
 
-function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
 export default async function (input: Input) {
   console.info(`Received event ${input.eventId}, with payload ${JSON.stringify(input.payload)} and valid time ${input.validTime}`);
   return {
