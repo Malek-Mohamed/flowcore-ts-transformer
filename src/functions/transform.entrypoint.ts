@@ -15,6 +15,7 @@ export default async function (input: Input) {
   return {
     eventid: input.eventId,
     validtime: input.validTime,
+    transformed_at: new Date().getTime,
     ...input.payload,
   };
 }
