@@ -1,12 +1,12 @@
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import axios from "axios";
-import {faker} from "@faker-js/faker";
-import {TransformData} from "./fixtures/dtos/transform-data.dto";
-import {FLOWCORE_CONSTANT_TIME_BUCKET_FORMAT} from "./fixtures/constants";
+import { faker } from "@faker-js/faker";
+import { TransformData } from "./fixtures/dtos/transform-data.dto";
+import { FLOWCORE_CONSTANT_TIME_BUCKET_FORMAT } from "./fixtures/constants";
 import _ from "lodash";
 import express from "express";
-import {Server} from "http";
+import { Server } from "http";
 import * as fs from "fs";
 import * as path from "path";
 import waitForExpect from "wait-for-expect";
@@ -96,17 +96,13 @@ describe("NodeJS Test Transformer (e2e)", () => {
     }
 
     for (const expectedConfiguration of expected) {
-      const data:{
+      const data: {
         [key: string]: any
       } = {};
 
       for (const key of Object.keys(expectedConfiguration.output)) {
-        console.log("Conf ", expectedConfiguration.output[key])
-        if (expectedConfiguration.output[key] === ":uuid:") {
-          data[key] = expect.any(String);
-          continue;
-        }
-        if (expectedConfiguration.output[key] === ":date:") {
+        const ignoredValues = [":uuid:", ":number:", ":date:"];
+        if (ignoredValues.includes(expectedConfiguration.output[key])) {
           data[key] = expect.any(String);
           continue;
         }
