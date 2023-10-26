@@ -68,8 +68,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
     const expected = JSON.parse(fs.readFileSync(path.join(__dirname, "expected.json"), "utf-8")) as { input: any, output: any }[];
 
     const definition = {
-      hello: "world",
-      random_number: 234
+      hello: "world"
     };
 
     for (const expectedConfiguration of expected) {

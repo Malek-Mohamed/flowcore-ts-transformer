@@ -20,7 +20,6 @@ export default async function (input: Input) {
     eventid: input.eventId,
     validtime: input.validTime,
     transformed_at: new Date().getTime,
-    rand_number: randomIntFromInterval(10, 100),
     ...input.payload,
   };
 }
