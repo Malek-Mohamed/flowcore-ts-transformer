@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (2023-10-26)
+
+
+### Features
+
+* Remove comment ([5251a05](https://github.com/Malek-Mohamed/flowcore-ts-transformer/commit/5251a050cc01293ec4b84bb04699ee3a17566fc1))
+* update the tests ([ded5d35](https://github.com/Malek-Mohamed/flowcore-ts-transformer/commit/ded5d3573c5a58a7e036686c325125c81dcdefa9))
+
 ## [2.0.0](https://github.com/flowcore-io/nodejs-typescript-transformer-example/compare/v1.3.1...v2.0.0) (2023-10-24)
 
 

@@ -68,7 +68,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
     const expected = JSON.parse(fs.readFileSync(path.join(__dirname, "expected.json"), "utf-8")) as { input: any, output: any }[];
 
     const definition = {
-      hello: "world",
+      hello: "world"
     };
 
     for (const expectedConfiguration of expected) {
@@ -103,10 +103,6 @@ describe("NodeJS Test Transformer (e2e)", () => {
       for (const key of Object.keys(expectedConfiguration.output)) {
         console.log("Conf ", expectedConfiguration.output[key])
         if (expectedConfiguration.output[key] === ":uuid:") {
-          data[key] = expect.any(String);
-          continue;
-        }
-        if (expectedConfiguration.output[key] === ":number:") {
           data[key] = expect.any(String);
           continue;
         }
