@@ -69,6 +69,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
 
     const definition = {
       hello: "world",
+      random_number: 234
     };
 
     for (const expectedConfiguration of expected) {
@@ -101,12 +102,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
       } = {};
 
       for (const key of Object.keys(expectedConfiguration.output)) {
-        console.debug(key, expectedConfiguration.output[key])
         if (expectedConfiguration.output[key] === ":uuid:") {
-          data[key] = expect.any(String);
-          continue;
-        }
-        if (expectedConfiguration.output[key] === ":number:") {
           data[key] = expect.any(String);
           continue;
         }
