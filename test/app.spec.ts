@@ -101,7 +101,7 @@ describe("NodeJS Test Transformer (e2e)", () => {
       } = {};
 
       for (const key of Object.keys(expectedConfiguration.output)) {
-        const ignoredValues = [":uuid:", ":number:", ":date:"];
+        const ignoredValues = [":uuid:", ":ignore:", ":date:"];
         if (ignoredValues.includes(expectedConfiguration.output[key])) {
           data[key] = expect.any(String);
           continue;
